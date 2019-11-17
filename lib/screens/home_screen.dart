@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:todos/screens/add_task_screen.dart';
 import 'package:todos/tabs/all_tasks.dart';
 import 'package:todos/tabs/completed_tasks.dart';
 import 'package:todos/tabs/incompleted_tasks.dart';
@@ -27,7 +28,14 @@ class _HomeScreenState extends State<HomeScreen>
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => AddTaskScreen(),
+                ),
+              );
+            },
           )
         ],
         bottom: TabBar(
