@@ -14,4 +14,20 @@ class TodoModel extends ChangeNotifier {
 
   UnmodifiableListView<Task> get completedTasks =>
       UnmodifiableListView(_tasks.where((todo) => todo.completed));
+
+  void addTodo(Task task) {
+    _tasks.add(task);
+    notifyListeners();
+  }
+
+  void toggleTodo(Task task) {
+    final taskIndex = _tasks.indexOf(task);
+    _tasks[taskIndex].toggleCompleted();
+    notifyListeners();
+  }
+
+  void deleteTodo(Task task) {
+    _tasks.remove(task);
+    notifyListeners();
+  }
 }
