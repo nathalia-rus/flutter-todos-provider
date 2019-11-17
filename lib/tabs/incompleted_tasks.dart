@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todos/providers/todos_model.dart';
 
-class IncompleteTasks extends StatelessWidget {
+class IncompleteTasksTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
