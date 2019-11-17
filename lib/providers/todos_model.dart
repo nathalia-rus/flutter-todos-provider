@@ -5,7 +5,13 @@ import "package:flutter/material.dart";
 import "package:todos/models/task.dart";
 
 class TodosModel extends ChangeNotifier {
-  final List<Task> _tasks = [];
+  // final List<Task> _tasks = [];
+
+  final List<Task> _tasks = [
+    Task(title: 'Finish the app'),
+    Task(title: 'Write a blog post'),
+    Task(title: 'Share with community')
+  ];
 
   UnmodifiableListView<Task> get allTasks => UnmodifiableListView(_tasks);
 
